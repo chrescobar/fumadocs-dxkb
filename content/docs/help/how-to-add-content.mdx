@@ -1,0 +1,199 @@
+---
+title: Adding Content
+description: How to Add Content to the DXKB Documentation Site
+---
+
+import { File, Folder, Files } from 'fumadocs-ui/components/files';
+import { Steps } from 'fumadocs-ui/components/steps';
+import { Banner } from 'fumadocs-ui/components/banner';
+
+# FIX THIS PAGE!!!
+This page contains information on how to add content to the DXKB documentation site.
+
+## Adding a new page to the top-level
+
+To add a new page, you need to create a new file in the `pages` directory.
+
+For this example, we will add a new page called `new-page.mdx`.
+
+   ### Create the new page
+    Here is the `pages` directory before we add the new page:
+
+    <Files>
+        <Folder name="pages" defaultOpen>
+            <File name="meta.json" />
+            <File name="contact.mdx" />
+            <File name="index.mdx" />
+        </Folder>
+    </Files>
+
+    Now, we will add the new page to the `pages` directory.
+    Note that all new pages should use the `.mdx` extension.
+
+    Here is the `pages` directory after we add the new page:
+
+    <Files>
+        <Folder name="pages" defaultOpen>
+            <File name="contact.mdx" />
+            <File name="index.mdx" />
+            <File name="new-page.mdx" />
+        </Folder>
+    </Files>
+
+    ### Add the new page to the `_meta.js` file
+    Now in order to get the page to show up in the navigation, we need to add the page to the `_meta.js` file.
+
+    Here is the `meta.json` file before we add the new page:
+
+    ```json filename="meta.json" copy
+    {
+        "contact": "Contact",
+        "index": "Home",
+        "new-page": "New Page"
+    }
+    ```
+
+    <Banner>
+        The `meta.json` file uses the format `filename: 'Navigation Title'` inside the `{ ... }` object to define pages.
+        If the page has dashes `-` in the filename, then the filename should be wrapped in quotes, or else an error will be thrown.
+    </Banner>
+
+## Adding a new folder with sub-pages
+
+The process for adding a new folder with sub-pages is similar to adding a new page to the top-level, but with some additional steps.
+
+    ### Create a new page
+    For this example, we will add a new folder called `new-folder` with two sub-pages: `sub-page-1.mdx` and `sub-page-2.mdx`.
+
+    To create a new folder, you need to create a new page (e.g. `new-folder.mdx`) in the `pages` directory.
+    This page (`new-folder.mdx`) will act as the landing page for the new folder.
+    In this case, 'folder' and 'page' can be used interchangeably, as a base page is needed to be the root of the folder.
+
+    Here is the `pages` directory BEFORE we add the new folder/page:
+
+    <Files>
+        <Folder name="pages" defaultOpen>
+            <File name="meta.json" />
+            <File name="contact.mdx" />
+            <File name="index.mdx" />
+        </Folder>
+    </Files>
+
+    Here is the `pages` directory AFTER we add the new folder/page:
+
+    <Files>
+        <Folder name="pages" defaultOpen>
+            <File name="meta.json" />
+            <File name="contact.mdx" />
+            <File name="index.mdx" />
+            <File name="new-folder.mdx" />
+        </Folder>
+    </Files>
+
+    ### Add the new page to the `_meta.js` file
+    Now in order to get the page to show up in the navigation, we need to add the page to the `_meta.js` file.
+
+    Here is the `meta.json` file BEFORE we add the new folder/page:
+
+    ```json filename="meta.json" copy
+    {
+        "contact": "Contact",
+        "index": "Home",
+        "new-folder": "New Folder"
+    }
+    ```
+
+    Here is the `meta.json` file AFTER we add the new folder/page:
+
+    ```json filename="meta.json" copy
+    {
+        "contact": "Contact",
+        "index": "Home",
+        "new-folder": "New Folder"
+    }
+    ```
+
+    ### Create a new directory for the sub-pages
+    Now we need to create a new directory for the sub-pages.
+    This is done by creating a new folder in the `pages` directory.
+
+    The name of the folder should be the same as the name of the page that we created earlier.
+    In this case, the folder name is `new-folder`.
+
+    Here is the `pages` directory AFTER we add the new folder:
+
+    <Files>
+        <Folder name="pages" defaultOpen>
+            <File name="meta.json" />
+            <File name="contact.mdx" />
+            <File name="index.mdx" />
+            <Folder name="new-folder" defaultOpen />
+        </Folder>
+    </Files>
+
+    ### Add the sub-pages to the new folder
+    Now we need to add the sub-pages to the new folder.
+    This is done by creating new page(s) in the new folder.
+
+    The names of the pages is up to you, but they should be unique and descriptive.
+    For this example, we will add two sub-pages called `sub-page-1.mdx` and `sub-page-2.mdx`.
+
+    Here is the `new-folder` directory AFTER we add the sub-pages:
+
+    <Files>
+        <Folder name="pages" defaultOpen>
+            <File name="meta.json" />
+            <File name="contact.mdx" />
+            <File name="index.mdx" />
+            <Folder name="new-folder" defaultOpen >
+                <File name="sub-page-1.mdx" />
+                <File name="sub-page-2.mdx" />
+            </Folder>
+        </Folder>
+    </Files>
+
+    ### Create a new `meta.json` file in the new folder
+    Now we need to create a new `meta.json` file in the new folder.
+    Similar to the top-level `meta.json` file, this file will use the format `filename: 'Navigation Title'` inside the `{ ... }` object to define pages inside the new folder.
+
+    Here is the `new-folder` directory AFTER we add the `meta.json` file:
+
+    <Files>
+        <Folder name="pages" defaultOpen>
+            <File name="meta.json" />
+            <File name="contact.mdx" />
+            <File name="index.mdx" />
+            <Folder name="new-folder" defaultOpen >
+                <File name="sub-page-1.mdx" />
+                <File name="sub-page-2.mdx" />
+            </Folder>
+        </Folder>
+    </Files>
+
+    ### Add the sub-pages to the `meta.json` file in the new folder
+    Now we need to add the sub-pages to the `meta.json` file in the new folder.
+
+    The format is the same as the top-level `meta.json` file.
+
+    Here is the `meta.json` file in the `new-folder` directory AFTER we add the sub-pages:
+
+    ```json filename="meta.json" copy
+    {
+        "sub-page-1": "Sub Page 1",
+        "sub-page-2": "Sub Page 2"
+    }
+    ```
+    <Banner>
+        The `meta.json` file in the new folder should only contain the sub-pages that are inside the new folder.
+    </Banner>
+
+    ### View the new pages!
+    <Banner>
+        You have successfully added a new folder with sub-pages to the DXKB documentation site!
+    </Banner>
+    Now you can view the new pages by navigating to the new folder in the navigation bar, well done!
+
+    For more information on how to add content to the DXKB documentation site, please refer to the [Nextra Documentation](https://nextra.site/docs) page.
+
+    If you have more questions about adding content to the DXKB documentation site, please [Contact Us](https://docs.dxkb.org/contact).
+

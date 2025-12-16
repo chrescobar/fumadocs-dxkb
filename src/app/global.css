@@ -1,3 +1,57 @@
 @import 'tailwindcss';
 @import 'fumadocs-ui/css/neutral.css';
 @import 'fumadocs-ui/css/preset.css';
+
+/* :root {
+  --fd-layout-width: 2560px;
+}
+
+:root, #nd-docs-layout {
+  --fd-layout-offset: max(calc(50vw - (var(--fd-layout-width) + 96px) / 2), 0px);
+} */
+
+article#nd-page {
+  padding-top: 12px !important;
+  padding-left: 16px !important;
+  margin-left: 8px !important;
+  margin-right: 8px !important;
+}
+
+header#nd-subnav {
+  height: 52px !important;
+}
+
+div[data-sidebar-panel] {
+  top: calc(calc(var(--spacing) * 4) + var(--fd-toc-popover-height) - 2px) !important;
+}
+
+article .grid-cols-2 {
+  grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+}
+
+@media (max-width: 1024px) {
+  article .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+}
+
+@media (max-width: 500px) {
+  article .grid-cols-2 {
+    grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+  }
+}
+
+
+article > div[class*="@container"][class*="grid"][class*="gap"]:last-child {
+  grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+}
+
+@media (min-width: 768px) {
+  article > div[class*="@container"][class*="grid"][class*="gap"]:last-child {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  }
+  article#nd-page {
+    padding-top: 64px !important;
+  }
+  
+}

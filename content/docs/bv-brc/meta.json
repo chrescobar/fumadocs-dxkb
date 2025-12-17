@@ -1,0 +1,5 @@
+{
+    "title": "BV-BRC",
+    "pages": ["overview", "services", "cli", "resources", "workshops"],
+    "defaultOpen": false
+}

@@ -18,6 +18,11 @@ export const docs = defineDocs({
 
 export default defineConfig({
   mdxOptions: {
-    // MDX options
+    remarkStructureOptions: {
+      // fumadocs-mdx 15.6+ keeps every JSX element as a raw tag in search
+      // records (e.g. `<Card title=… />`). Returning false replaces each
+      // element with its children, so Callout text stays searchable.
+      filterElement: () => false,
+    },
   },
 });

@@ -1,0 +1,23 @@
+src/app/llms.mdx/docs/[[...slug]]/route.ts
+  s_5d95bdf077b97e::t_79b4b7467d9f6b 6-7
+src/proxy.ts
+  s_5d95bdf077b97e::t_5275242b11e021 2,5-8,24-25
+README.md
+  s_5d95bdf077b97e::t_5275242b11e021 42
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "888a61574150cfe3947b95f2804205ec887d4735",
+  "prompts": {},
+  "sessions": {
+    "s_5d95bdf077b97e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "13fa2906-7565-4664-b94c-9149c70bf851",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Chris Escobar <chrescobar@uchicago.edu>"
+    }
+  }
+}

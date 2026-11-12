@@ -1,0 +1,23 @@
+README.md
+  s_5d95bdf077b97e::t_6a049cfed2e97a 28-31
+source.config.ts
+  s_5d95bdf077b97e::t_191a86884fb2a5 10-12
+src/app/docs/[[...slug]]/page.tsx
+  s_5d95bdf077b97e::t_191a86884fb2a5 9,49-51
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "df462a3a4224c513c295ac6f110bc1164d254dd6",
+  "prompts": {},
+  "sessions": {
+    "s_5d95bdf077b97e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "13fa2906-7565-4664-b94c-9149c70bf851",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Chris Escobar <chrescobar@uchicago.edu>"
+    }
+  }
+}

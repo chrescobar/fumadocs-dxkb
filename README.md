@@ -39,7 +39,7 @@ In the project, you can see:
 | `app/api/search/route.ts` | The Route Handler for search.                          |
 | `app/llms.txt`            | Index of all pages for LLMs (`/llms.txt`).             |
 | `app/llms-full.txt`       | Every page as Markdown in one file (`/llms-full.txt`). |
-| `app/llms.mdx/docs`       | One page as Markdown; also served at `/docs/<page>.md` and for `Accept: text/markdown` via `src/proxy.ts`. |
+| `app/llms.mdx/docs`       | One page as Markdown; also served at `/docs/<page>.md` via `src/proxy.ts`. |
 
 ### Fumadocs MDX
 

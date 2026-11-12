@@ -3,6 +3,8 @@ import { getPageMarkdownUrl } from '@/lib/shared';
 import { notFound } from 'next/navigation';
 
 export const revalidate = false;
+// Only the prerendered `<page>/content.md` URLs exist; anything else is 404.
+export const dynamicParams = false;
 
 export async function GET(
   _req: Request,

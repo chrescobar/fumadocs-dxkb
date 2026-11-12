@@ -17,6 +17,14 @@ yarn dev
 
 Open http://localhost:3000 with your browser to see the result.
 
+## Deployment
+
+Set these environment variables at build time:
+
+| Variable   | Example                    | Purpose                                                    |
+| ---------- | -------------------------- | ---------------------------------------------------------- |
+| `SITE_URL` | `https://docs.example.org` | Base URL for absolute Open Graph image links (`metadataBase`). |
+
 ## Explore
 
 In the project, you can see:

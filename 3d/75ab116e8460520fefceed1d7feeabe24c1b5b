@@ -1,0 +1,24 @@
+README.md
+  s_5d95bdf077b97e::t_03c5821a418156 20-27
+src/app/og/docs/[...slug]/route.tsx
+  s_5d95bdf077b97e::t_03c5821a418156 3,15-24
+src/app/layout.tsx
+  s_5d95bdf077b97e::t_03c5821a418156 2,10-14
+  s_5d95bdf077b97e::t_f374f4ec66afcb 15
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "3d75ab116e8460520fefceed1d7feeabe24c1b5b",
+  "prompts": {},
+  "sessions": {
+    "s_5d95bdf077b97e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "13fa2906-7565-4664-b94c-9149c70bf851",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Chris Escobar <chrescobar@uchicago.edu>"
+    }
+  }
+}

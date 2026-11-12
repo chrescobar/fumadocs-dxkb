@@ -7,6 +7,9 @@ export const docs = defineDocs({
   dir: 'content/docs',
   docs: {
     schema: pageSchema,
+    // Date of the last git commit touching each file. Needs full git history
+    // at build time (no shallow clone).
+    lastModified: true,
     postprocess: {
       includeProcessedMarkdown: true,
     },

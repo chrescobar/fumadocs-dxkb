@@ -25,6 +25,10 @@ Set these environment variables at build time:
 | ---------- | -------------------------- | ---------------------------------------------------------- |
 | `SITE_URL` | `https://docs.example.org` | Base URL for absolute Open Graph image links (`metadataBase`). |
 
+The "Last updated" date on each page comes from git history, so the build must
+run in a full (non-shallow) clone. In CI, use `fetch-depth: 0` (GitHub Actions)
+or `git fetch --unshallow` before `pnpm build`.
+
 ## Explore
 
 In the project, you can see:

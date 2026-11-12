@@ -41,11 +41,21 @@
 }
 
 
+/* Widen the docs content column. Fumadocs sizes the main grid track as
+   --fd-layout-width minus the sidebar and TOC widths (default 97rem). */
+#nd-docs-layout {
+  --fd-layout-width: 115rem;
+}
+
+/* Since fumadocs-ui 16.15 the article sits in a centered <main> grid, so
+   article margins no longer apply. Pad the main track instead. */
+#nd-docs-layout main[data-layout-main] {
+  padding-inline: 8px;
+}
+
 article#nd-page {
   padding-top: 12px !important;
   padding-left: 16px !important;
-  margin-left: 8px !important;
-  margin-right: 8px !important;
   max-width: 1280px !important;
 }
 
@@ -53,8 +63,10 @@ header#nd-subnav {
   height: 52px !important;
 }
 
+/* Same base as fumadocs-ui 16.3+ (spacing(4) + --fd-docs-row-3, i.e. banner +
+   header + TOC popover heights), nudged up 2px on purpose. */
 div[data-sidebar-panel] {
-  top: calc(calc(var(--spacing) * 4) + var(--fd-toc-popover-height) - 2px) !important;
+  top: calc(var(--spacing) * 4 + var(--fd-docs-row-3) - 2px) !important;
 }
 
 article .grid-cols-2 {

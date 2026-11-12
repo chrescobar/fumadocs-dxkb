@@ -2,3 +2,11 @@ onlyBuiltDependencies:
   - esbuild
   - sharp
   - unrs-resolver
+
+# eslint-config-next >=16.4.0 shims ESLint 10 for these plugins, which still
+# declare eslint <=9 as a peer. Remove once they publish ESLint 10 support.
+peerDependencyRules:
+  allowedVersions:
+    eslint-plugin-react>eslint: '10'
+    eslint-plugin-import>eslint: '10'
+    eslint-plugin-jsx-a11y>eslint: '10'

@@ -10,14 +10,7 @@ import { getMDXComponents } from '@/mdx-components';
 import type { Metadata } from 'next';
 import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { Card, Cards } from 'fumadocs-ui/components/card';
-import {
-  findPath,
-  getPageTreePeers,
-  type Folder,
-  type Item,
-  type Node,
-  type Root,
-} from 'fumadocs-core/page-tree';
+import { findSiblings, type Folder, type Item } from 'fumadocs-core/page-tree';
 
 export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
   const params = await props.params;
@@ -65,48 +58,25 @@ export async function generateMetadata(
   };
 }
 
+/**
+ * Cards for the pages and folders that share a parent with `url`.
+ * On a folder's index page, that is the folder's own children.
+ */
 function DocsCategory({ url }: { url: string }) {
-  // Find the path to the current page
-  const path = findPath(source.pageTree.children, (node) => {
-    if (node.type === 'page') return node.url === url;
-    if (node.type === 'folder' && node.index) return node.index.url === url;
-    return false;
-  });
-
-  // Get the folder that contains the current page (or the folder itself if it's an index page)
-  let folder: Folder | Root | undefined;
-  if (path) {
-    // Check if last node in path is a folder (meaning current page is the index)
-    const lastNode = path[path.length - 1];
-    if (lastNode?.type === 'folder') {
-      folder = lastNode;
-    } else {
-      // Find the parent folder
-      folder = path.find((node): node is Folder => node.type === 'folder');
-    }
-  }
-
-  // Fall back to root if no folder found
-  const children = folder?.children ?? source.pageTree.children;
-
-  // Filter to only include pages and folders (not separators) at the current level
-  const items = children.filter(
-    (node): node is Item | Folder => node.type === 'page' || node.type === 'folder'
+  const items = findSiblings(source.pageTree, url).filter(
+    (node): node is Item | Folder =>
+      node.type === 'page' || node.type === 'folder',
   );
 
   return (
     <Cards>
       {items.map((item) => {
-        const itemUrl = item.type === 'folder' ? item.index?.url : item.url;
-        const name = item.name;
-        const description = item.description;
-        const icon = item.icon;
-
-        if (!itemUrl) return null;
+        const href = item.type === 'folder' ? item.index?.url : item.url;
+        if (!href) return null;
 
         return (
-          <Card key={itemUrl} title={name} href={itemUrl} icon={icon}>
-            {description}
+          <Card key={href} title={item.name} href={href} icon={item.icon}>
+            {item.description}
           </Card>
         );
       })}

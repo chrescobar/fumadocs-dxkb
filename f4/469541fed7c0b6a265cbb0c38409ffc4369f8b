@@ -1,0 +1,19 @@
+source.config.ts
+  s_5d95bdf077b97e::t_71da85a14c0f32 21-26
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "f4469541fed7c0b6a265cbb0c38409ffc4369f8b",
+  "prompts": {},
+  "sessions": {
+    "s_5d95bdf077b97e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "13fa2906-7565-4664-b94c-9149c70bf851",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Chris Escobar <chrescobar@uchicago.edu>"
+    }
+  }
+}

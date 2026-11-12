@@ -3,6 +3,8 @@ import { notFound } from 'next/navigation';
 import { generateOGImage } from 'fumadocs-ui/og';
 
 export const revalidate = false;
+// Only the prerendered `<page>/image.png` URLs exist; anything else is 404.
+export const dynamicParams = false;
 
 export async function GET(
   _req: Request,

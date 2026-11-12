@@ -16,6 +16,9 @@ import { createRelativeLink } from 'fumadocs-ui/mdx';
 import { Card, Cards } from 'fumadocs-ui/components/card';
 import { findSiblings, type Folder, type Item } from 'fumadocs-core/page-tree';
 
+// Every docs page is prerendered by generateStaticParams; unknown paths 404.
+export const dynamicParams = false;
+
 export default async function Page(props: PageProps<'/docs/[[...slug]]'>) {
   const params = await props.params;
   const page = source.getPage(params.slug);

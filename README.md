@@ -37,6 +37,9 @@ In the project, you can see:
 | `app/(home)`              | The route group for your landing page and other pages. |
 | `app/docs`                | The documentation layout and pages.                    |
 | `app/api/search/route.ts` | The Route Handler for search.                          |
+| `app/llms.txt`            | Index of all pages for LLMs (`/llms.txt`).             |
+| `app/llms-full.txt`       | Every page as Markdown in one file (`/llms-full.txt`). |
+| `app/llms.mdx/docs`       | One page as Markdown; also served at `/docs/<page>.md` and for `Accept: text/markdown` via `src/proxy.ts`. |
 
 ### Fumadocs MDX
 

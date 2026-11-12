@@ -1,7 +1,10 @@
 {
   "name": "dxkb-docs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
+  "engines": {
+    "node": ">=24"
+  },
   "scripts": {
     "build": "next build",
     "dev": "next dev",
@@ -11,8 +14,6 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@radix-ui/react-tabs": "^1.2.1",
-    "class-variance-authority": "^0.7.1",
     "fumadocs-core": "16.19.0",
     "fumadocs-mdx": "15.6.0",
     "fumadocs-ui": "16.19.0",
@@ -20,11 +21,9 @@
     "next": "16.4.6",
     "react": "^19.3.1",
     "react-dom": "^19.3.1",
-    "react-icons": "^5.7.0",
-    "tailwind-merge": "^3.7.0"
+    "react-icons": "^5.7.0"
   },
   "devDependencies": {
-    "@eslint/eslintrc": "^3.3.7",
     "@tailwindcss/postcss": "^4.3.5",
     "@types/mdx": "^2.0.14",
     "@types/node": "^26.6.6",
@@ -34,6 +33,6 @@
     "eslint-config-next": "16.4.6",
     "postcss": "^8.5.32",
     "tailwindcss": "^4.3.5",
-    "typescript": "^6.0.3"
+    "typescript": "~6.0.3"
   }
 }

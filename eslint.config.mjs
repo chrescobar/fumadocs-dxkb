@@ -2,15 +2,9 @@ import { defineConfig, globalIgnores } from 'eslint/config';
 import nextVitals from 'eslint-config-next/core-web-vitals';
 import nextTs from 'eslint-config-next/typescript';
 
+// eslint-config-next already ignores .next/, out/, build/ and next-env.d.ts.
 export default defineConfig([
   ...nextVitals,
   ...nextTs,
-  globalIgnores([
-    'node_modules/**',
-    '.next/**',
-    'out/**',
-    'build/**',
-    '.source/**',
-    'next-env.d.ts',
-  ]),
+  globalIgnores(['.source/**']),
 ]);

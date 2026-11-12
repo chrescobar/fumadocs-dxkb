@@ -3,6 +3,8 @@
 This is a Next.js application generated with
 [Create Fumadocs](https://github.com/fuma-nama/fumadocs).
 
+Requires Node.js 24 or newer (`.nvmrc` pins 26; run `nvm use`).
+
 Run development server:
 
 ```bash

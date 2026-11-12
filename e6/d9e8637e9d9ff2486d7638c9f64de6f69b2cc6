@@ -1,0 +1,19 @@
+README.md
+  s_5d95bdf077b97e::t_55d313c4d3314b 28-37
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.7.5",
+  "base_commit_sha": "e6d9e8637e9d9ff2486d7638c9f64de6f69b2cc6",
+  "prompts": {},
+  "sessions": {
+    "s_5d95bdf077b97e": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "13fa2906-7565-4664-b94c-9149c70bf851",
+        "model": "claude-opus-5-5"
+      },
+      "human_author": "Chris Escobar <chrescobar@uchicago.edu>"
+    }
+  }
+}

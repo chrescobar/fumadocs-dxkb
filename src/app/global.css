@@ -63,8 +63,8 @@ header#nd-subnav {
   height: 52px !important;
 }
 
-/* Matches fumadocs-ui 16.3+, which offsets by --fd-docs-row-3
-   (banner + header + TOC popover heights). */
+/* Same base as fumadocs-ui 16.3+ (spacing(4) + --fd-docs-row-3, i.e. banner +
+   header + TOC popover heights), nudged up 2px on purpose. */
 div[data-sidebar-panel] {
   top: calc(var(--spacing) * 4 + var(--fd-docs-row-3) - 2px) !important;
 }

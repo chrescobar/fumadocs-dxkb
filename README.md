@@ -8,11 +8,7 @@ Requires Node.js 24 or newer (`.nvmrc` pins 26; run `nvm use`).
 Run development server:
 
 ```bash
-npm run dev
-# or
 pnpm dev
-# or
-yarn dev
 ```
 
 Open http://localhost:3000 with your browser to see the result.
